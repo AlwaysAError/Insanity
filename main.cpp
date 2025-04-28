@@ -2,6 +2,9 @@
 
 #include <thread>
 
+#include <windows.h>
+
+
 int __stdcall wWinMain(
 	HINSTANCE instance,
 	HINSTANCE previousInstance,
