@@ -248,6 +248,32 @@ void gui::Render() noexcept
 		ImGuiWindowFlags_NoCollapse |
 		ImGuiWindowFlags_NoMove
 	);
+
+	// ImGui pop-up logic
+	static bool show_popuprizz = true; // Show on startup
+	if (show_popuprizz) {
+		ImGui::OpenPopup("WARNING");
+	}
+
+	if (ImGui::BeginPopupModal("WARNING", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+		ImGui::Text("This is still in heavy beta and only works for AMD CPU's. Intel support may be a future thing.");
+		ImGui::Text("Not every feature works for everyone. Some features have not even been coded yet.");
+		ImGui::Text("GitHub Page: https://github.com/AlwaysAError/Insanity");
+		ImGui::Text("Discord Server: https://discord.gg/projectunban");
+		ImGui::Separator();
+		if (ImGui::Button("OK", ImVec2(120, 0))) {
+			show_popuprizz = false;
+			ImGui::CloseCurrentPopup();
+		}
+		ImGui::EndPopup();
+	}
+
+	// Rest of your tabbed interface (unchanged)
+	if (ImGui::BeginTabBar("MainTabBar")) {
+		// ... (your existing tab code remains unchanged)
+	}
+
+
 	// Normals Tab
 	if (ImGui::BeginTabBar("MainTabBar")) { 
 		if (ImGui::BeginTabItem("Normals Tab")) {
@@ -418,6 +444,40 @@ void gui::Render() noexcept
 			static bool hideip = false; 
 			ImGui::Checkbox("Hide IP", &hideip);
 			ImGui::Text("   ");
+			ImGui::Text("Slash Commands");
+			ImGui::Text("Slash commands allow you to execute cheats through the game and in the future");
+			ImGui::Text("will allow you to let other players use these slash commands");
+
+			static char buffer[256] = "";
+			ImGui::InputText(" ", buffer, sizeof(buffer));
+
+			ImGui::Text("What you enter into the above text box will trigger what you choose below");
+
+			{
+				static bool check1 = false;
+				static bool check2 = false;
+				static bool check3 = false;
+
+				if (ImGui::Checkbox("Request Kick Events (kicks as many people as possible)", &check1))
+				{
+					check2 = false;
+					check3 = false;
+				}
+
+				if (ImGui::Checkbox("Makerpen every lobby (gives everyone makerpen)", &check2))
+				{
+					check1 = false;
+					check3 = false;
+				}
+
+				if (ImGui::Checkbox("Coming Soon...", &check3))
+				{
+					check1 = false;
+					check2 = false;
+				}
+			}
+
+			ImGui::Text("   ");
 			ImGui::Text("   ");
 			ImGui::Text("   ");
 			ImGui::Text("Test Boxes");
@@ -518,7 +578,7 @@ void gui::Render() noexcept
 			ImGui::Text("4. Windows or a installed anti virus may be blocking the cheat from doing what is loves to do.");
 			ImGui::Text("   ");
 			ImGui::Text("Lua support");
-			ImGui::Text("We support Lua scripts and have coded our cheat to support Lua scripts which are made to work with Cheat Engine.");
+			ImGui::Text("We support Lua scripts that have been coded to work with Cheat Engine.");
 			ImGui::Text("   ");
 			ImGui::Text("-------------------------------------------------------------------------------------------------------------------------------------------");
 			ImGui::Text("   ");
