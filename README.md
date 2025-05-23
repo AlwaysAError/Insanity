@@ -16,3 +16,5 @@ MotherBoard: ASUS (any)
 GPU: Any GPU works but we recommend Nvidia  
 Operating System. Windows 11  
 100MB of storage space avilable  
+1GB of usable uncached RAM  
+Download speed of 5MB or higher  
