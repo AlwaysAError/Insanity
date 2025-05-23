@@ -3,6 +3,7 @@ Some of the source code for a RecRoom cheat called Insanity.
 
 Insanity is a massive (Ninja) cheat made for RecRoom with many features. We the creators have decided to release some of the source code for it. The source code includes ImGui elements and some cheat related stuff. We will not be making some of the cheat open source as features would get patched and detected.
 
+
 Credits time!
 
 .
