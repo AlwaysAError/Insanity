@@ -12,11 +12,11 @@ ImGui: https://github.com/ocornut/imgui
 
 System Requirements  
 CPU: AMD Ryzen 5 or higher  
-MotherBoard: ASUS (any)  
+MotherBoard: Any type of ASUS motherboard
 GPU: Any GPU works but we recommend Nvidia  
 Operating System. Windows 11  
 100MB of storage space avilable  
 1GB of usable uncachted RAM  
 Download speed of 5MB or higher  
 Latest version of Microsoft.NET  
-Windows Defender or any other anti virus off  
+Windows Defender or any other anti virus off (only needs to be off if the cheat is having issues)  
