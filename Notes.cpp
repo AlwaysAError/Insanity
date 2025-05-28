@@ -57,3 +57,7 @@ if (ImGui::BeginTabItem("Exploits Tab")) {
     ImGui::Text("You typed: %s", buffer); // Display the input
 
     //Sigma
+
+//Separator
+//Creates a line to separator stuff
+    ImGui::Separator();
