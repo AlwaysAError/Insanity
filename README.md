@@ -1,3 +1,6 @@
+#NOTICE!!!
+I have stopped working on this project due to Visual Studio auto saving all the damn breaking the project file's and half of the source code and I am not dealing with all that so I have uploaded almost all source code for you guys to go and use for what ever you want like making your own RecRoom cheat.
+
 # Insanity
 Some of the source code for a RecRoom cheat called Insanity.  
 Insanity is a massive (Ninja) cheat made for RecRoom with many features. We the creators have decided to release some of the source code for it. The source code includes ImGui elements and some cheat related stuff. We will not be making the full cheat open source as features would get patched and detected.  
